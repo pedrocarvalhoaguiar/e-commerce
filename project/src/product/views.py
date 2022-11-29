@@ -2,18 +2,19 @@ from django.shortcuts import render
 from django.views.generic import ListView
 from src.product.models import Product
 from django.core.exceptions import ImproperlyConfigured
+from django.db.models import Q
 # Create your views here.
 
 class ProductListView(ListView):
     model = Product
     context_object_name = 'products'
-    paginate_by = 1
+    paginate_by = 10
 
     def get_queryset(self):
 
-        if 'q' in self.request.GET:
+        if self.request.GET.get('q'):
             q = self.request.GET['q']
-            queryset = Product.objects.filter(name__icontains=q)
+            queryset = Product.objects.filter(Q(name__icontains=q) | Q(description__icontains=q))
         else:
             if self.queryset is not None:
                 queryset = self.queryset
