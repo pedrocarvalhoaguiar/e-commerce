@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    {% for product in products %}
+        <p style="padding: 100px">{{ product.name }}</p>
+    {% endfor %}
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}">Voltar</a>
+    {% endif %}
+    {% if request.GET.q and page_obj.has_next %}
+    <a href="?q={{ request.GET.q }}&page={{ page_obj.next_page_number }}">
+    Next&nbsp;&raquo;
+    </a>
+    {% elif page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">Next&nbsp;&raquo;</a>
+    {% endif %}
+{% endblock %}
