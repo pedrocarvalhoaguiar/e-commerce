@@ -28,8 +28,9 @@ SECRET_KEY = 'django-insecure-3*e0golk!sh3w@*%$8c8%w9+ba8f=6_=yvfbmbn=$*p&dg-meg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ecommerce-7mv7ytuela-uc.a.run.app']
-
+SELF_DOMAIN = 'ecommerce-7mv7ytuela-uc.a.run.app'
+ALLOWED_HOSTS = [f'https://{SELF_DOMAIN}']
+CSRF_TRUSTED_ORIGINS = [F'https://*.{SELF_DOMAIN}']
 
 # Application definition
 
