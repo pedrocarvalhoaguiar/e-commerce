@@ -38,14 +38,14 @@ jobs:
           docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:latest
           docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:$GIT_TAG  
 
-       - name: Deploy to Cloud Run
+      - name: Deploy to Cloud Run
         id: deploy
         uses: google-github-actions/deploy-cloudrun@v0
         with:
           service: ${{ env.SERVICE }}
           region: ${{ env.REGION }}
           image: gcr.io/$PROJECT_ID/$IMAGE_NAME:$GIT_TAG
-       - name: Show Output
-         run: echo ${{ steps.deploy.outputs.url }}
+      - name: Show Output
+        run: echo ${{ steps.deploy.outputs.url }}
       
 
