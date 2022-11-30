@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8fe54ccb-0a35-4b27-87e3-83315e0f5d84" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/project/templates/base/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/settings/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/settings/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/cart/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/product/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/product/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/product/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/user/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/user/managers.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/user/managers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/user/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/user/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/user/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/utils/custom_models.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ICjVUsCnnNwTdIuOTz9vE1asDd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pedri\Videos\fabricio-p2\e-commerce\project" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8fe54ccb-0a35-4b27-87e3-83315e0f5d84" name="Changes" comment="" />
+      <created>1669692483790</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669692483790</updated>
+      <workItem from="1669692486053" duration="3953000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
