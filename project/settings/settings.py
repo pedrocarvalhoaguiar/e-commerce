@@ -30,7 +30,7 @@ DEBUG = True
 
 SELF_DOMAIN = 'ecommerce-7mv7ytuela-uc.a.run.app'
 ALLOWED_HOSTS = [SELF_DOMAIN]
-CSRF_TRUSTED_ORIGINS = [SELF_DOMAIN]
+CSRF_TRUSTED_ORIGINS = [f'https://{SELF_DOMAIN}']
 
 # Application definition
 
