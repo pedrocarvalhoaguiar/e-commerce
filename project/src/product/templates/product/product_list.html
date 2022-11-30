@@ -1,0 +1,98 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .product-card {
+        min-width: 150px;
+    }
+
+    button,
+    input[type="submit"],
+    input[type="reset"],
+    button:active,
+    button:focus {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+    }
+</style>
+<div style="display: flex; justify-content: center;">
+    <form method="GET">
+        <label for="search">Search</label>
+        <input type="text" id="search" name="q" value="{{ request.GET.q }}">
+    </form>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; gap: 2em; flex-wrap: wrap;">
+    {% for product in products %}
+    <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+            {% if product.image %}
+            <img class="activator" style="object-fit: contain; max-width: 200px;" src="{{ product.image.url }}"
+                alt="teste">
+            {% endif %}
+        </div>
+        <div class="card-content">
+            <p class="card-title activator grey-text text-darken-4">{{ product.name }}</p>
+            <p>R$ {{ product.price }}</p>
+            <span><button class="add-to-cart-button " data-product="{{ product.id }}" data-action="add"
+                    value="{{ product.id }}"><i class="material-icons">add_shopping_cart</i></button></span>
+            <span><a href="#">View more</a></span>
+        </div>
+        <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">{{ product.name }}<i
+                    class="material-icons right">close</i></span>
+            <p>{{ product.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<div style="display: flex; justify-content: center; align-items: bottom;">
+    {% if request.GET.q and page_obj.has_previous %}
+    <a href="?q={{ request.GET.q }}&page={{ page_obj.previous_page_number }}">
+        &laquo;&nbsp;Previous
+    </a>
+    {% elif page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}">&laquo;&nbsp;Previous</a>
+    {% endif %}
+    {% if request.GET.q and page_obj.has_next %}
+    <a href="?q={{ request.GET.q }}&page={{ page_obj.next_page_number }}">
+        Next&nbsp;&raquo;
+    </a>
+    {% elif page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">Next&nbsp;&raquo;</a>
+    {% endif %}
+</div>
+<script>
+    
+    const products = document.getElementsByClassName('add-to-cart-button')
+    for (var i = 0; i < products.length; i++){
+        products[i].addEventListener('click', makeRain)
+    }
+
+    function makeRain() {
+        url = "{% url 'cart:add-to-cart' %}"
+        console.log(this)
+        productId = this.dataset.product
+        action = this.dataset.action
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                "X-CSRFToken": getCookie("csrftoken"),
+                "X-Requested-With": "XMLHttpRequest",             
+            },
+            body: JSON.stringify({ 'productId': productId, 'action': action})
+        })
+            .then((response) => {
+                return response.json()
+            })
+            .then((data) => {
+                console.log('Data:', data)
+            });
+    }
+</script>
+{% endblock %}

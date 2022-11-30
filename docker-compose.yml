@@ -1,0 +1,23 @@
+version: '3'
+services:
+    eccomerce:
+        container_name: ecommerce
+        hostname: ecommerce.localhost
+        build: ./
+        working_dir: /usr/src/app
+        environment:
+            - PYTHONUNBUFFERED='true'
+            - DJANGO_SETTINGS_MODULE=settings.settings
+            - DJANGO_LOG_LEVEL=INFO
+            - OAUTHLIB_INSECURE_TRANSPORT=False
+        volumes:
+            - ./project:/usr/src/app
+        command: >
+            /bin/bash -c "
+                python manage.py makemigrations --noinput;
+                python manage.py migrate --noinput;
+                # python manage.py collectstatic --noinput;
+                python manage.py runserver ecommerce.localhost:8014"
+        ports:
+            - "8014:8014"
+        restart: unless-stopped
