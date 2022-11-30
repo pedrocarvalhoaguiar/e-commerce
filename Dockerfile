@@ -24,6 +24,6 @@ EXPOSE 8000
 
 WORKDIR /usr/src/app/project
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
-
+CMD gunicorn    --bind 0.0.0.0:8000         \
+                --reload wsgi:application
 
