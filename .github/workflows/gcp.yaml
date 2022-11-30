@@ -48,5 +48,8 @@ jobs:
           image: gcr.io/${{ env.PROJECT_ID }}/${{ env.IMAGE_NAME }}
       - name: Show Output
         run: echo ${{ steps.deploy.outputs.url }}
-      
+      - name: migrations
+        run: |-
+          python manage.py makemigrations
+          python manage.py migrate
 
