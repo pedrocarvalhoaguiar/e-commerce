@@ -50,6 +50,7 @@ jobs:
         run: echo ${{ steps.deploy.outputs.url }}
       - name: migrations
         run: |-
+          ls
           python manage.py makemigrations
           python manage.py migrate
 
