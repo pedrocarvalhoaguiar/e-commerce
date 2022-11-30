@@ -46,7 +46,7 @@ jobs:
         with:
           service: ${{ env.SERVICE }}
           region: ${{ env.REGION }}
-          image: gcr.io/${{ PROJECT_ID }}/${{ IMAGE_NAME }}:${{ GIT_TAG }}
+          image: 'gcr.io/${{ PROJECT_ID }}/${{ IMAGE_NAME }}:${{ GIT_TAG }}'
       - name: Show Output
         run: echo ${{ steps.deploy.outputs.url }}
       
