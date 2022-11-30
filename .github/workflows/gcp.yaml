@@ -19,7 +19,7 @@ jobs:
       - name: Authenticate
         uses: google-github-actions/auth@v1
         with:
-          service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+          service_account_key: ${{ secrets.GCP_CREDENTIALS }}
           project_id: ${{ env.PROJECT_ID }}
           export_default_credentials: true
 
