@@ -41,7 +41,7 @@ jobs:
           docker push gcr.io/$PROJECT_ID/$IMAGE_NAME:$GIT_TAG  
 
       - name: Show Output
-        run: echo ${{ gcr.io/$PROJECT_ID/$IMAGE_NAME:${{ github.sha }} }}
+        run: echo ${{ gcr.io/$PROJECT_ID/$IMAGE_NAME:$GIT_TAG }}
 
       - name: Deploy to Cloud Run      
         id: deploy
