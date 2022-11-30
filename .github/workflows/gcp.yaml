@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       IMAGE_NAME: teste
-      PROJECT_ID: civil-partition-365813
-      SERVICE: teste-00001-jec
-      REGION: southamerica-east1
+      PROJECT_ID: ecommerce-370206
+      SERVICE: ecommerce
+      REGION: us-central1
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
