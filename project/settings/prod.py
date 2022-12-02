@@ -80,8 +80,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'wsgi.application'
 
 
-Database
-https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -175,6 +173,6 @@ SITE_ID = 2
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
-DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-GS_BUCKET_NAME = 'django-ecommerce'
-STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+# GS_BUCKET_NAME = 'django-ecommerce'
+# STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
