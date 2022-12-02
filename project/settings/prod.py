@@ -90,7 +90,7 @@ DATABASES = {
 }
 
 DATABASES = {
-    'default': dj_database_url.config('postgres://django-ecommerce:h\e(@V~Df`iy5#4l:@//cloudsql/commerce-370206:southamerica-east1:django-ecommerce/ecommerce-django')
+    'default': dj_database_url.config('postgresql://django-ecommerce:h\e(@V~Df`iy5#4l:@//cloudsql/commerce-370206:southamerica-east1:django-ecommerce/ecommerce-django')
 }
 
 # Password validation
