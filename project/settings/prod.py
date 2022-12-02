@@ -94,7 +94,7 @@ DATABASES = {
         'NAME': os.getenv('DB_NAME', default='ecommerce-django'),
         'USER': os.getenv('DB_USER', default='django-ecommerce'),
         'PASSWORD': os.getenv('DB_PASSWORD', default='h\e(@V~Df`iy5#4l'),
-        'HOST': os.getenv('DB_HOST', default='/cloudsql/commerce-370206:southamerica-east1:django-ecommerce/'),
+        'HOST': os.getenv('DB_HOST', default='/cloudsql/commerce-370206:southamerica-east1:django-ecommerce'),
         'PORT': '5432',
     },
 }
