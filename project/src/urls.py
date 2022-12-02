@@ -25,5 +25,5 @@ urlpatterns = [
     path('cart/', include('src.cart.urls')),
     path('logout/', LogoutView.as_view(), name='logout')
 ]
-if settings.ENVIROMENT == 'local':
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
