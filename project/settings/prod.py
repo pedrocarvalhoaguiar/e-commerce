@@ -88,16 +88,16 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': os.getenv('DB_NAME', default='ecommerce-django'),
-#         'USER': os.getenv('DB_USER', default='django-ecommerce'),
-#         'PASSWORD': os.getenv('DB_PASSWORD', default='h\e(@V~Df`iy5#4l'),
-#         'HOST': os.getenv('DB_HOST', default='ecommerce-370206:southamerica-east1:django-ecommerce'),
-#         'PORT': '5432',
-#     },
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv('DB_NAME', default='ecommerce-django'),
+        'USER': os.getenv('DB_USER', default='django-ecommerce'),
+        'PASSWORD': os.getenv('DB_PASSWORD', default='h\e(@V~Df`iy5#4l'),
+        'HOST': os.getenv('DB_HOST', default='/cloudsql/commerce-370206:southamerica-east1:django-ecommerce/'),
+        'PORT': '5432',
+    },
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
