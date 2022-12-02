@@ -80,26 +80,26 @@ TEMPLATES = [
 WSGI_APPLICATION = 'wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+Database
+https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('DB_NAME', default='ecommerce-django'),
-        'USER': os.getenv('DB_USER', default='django-ecommerce'),
-        'PASSWORD': os.getenv('DB_PASSWORD', default='h\e(@V~Df`iy5#4l'),
-        'HOST': os.getenv('DB_HOST', default='ecommerce-370206:southamerica-east1:django-ecommerce'),
-        'PORT': '5432',
-    },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': os.getenv('DB_NAME', default='ecommerce-django'),
+#         'USER': os.getenv('DB_USER', default='django-ecommerce'),
+#         'PASSWORD': os.getenv('DB_PASSWORD', default='h\e(@V~Df`iy5#4l'),
+#         'HOST': os.getenv('DB_HOST', default='ecommerce-370206:southamerica-east1:django-ecommerce'),
+#         'PORT': '5432',
+#     },
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -175,8 +175,6 @@ SITE_ID = 2
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
-# DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-# GS_BUCKET_NAME = 'django-ecommerce'
-# STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-# GS_ACCESS_KEY_ID = 'GOOG1EZ6TONBICEI7NJIY4Y4FGMDWH2OIYW6OFHWLU4AWHQP4SGQVMF7CGBSI'
-# GS_SECRET_ACCESS_KEY = 'DZ+6mRIsz0boTmgj3wax6hQD/OlwqDFls9QDqG+m'
+DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+GS_BUCKET_NAME = 'django-ecommerce'
+STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
