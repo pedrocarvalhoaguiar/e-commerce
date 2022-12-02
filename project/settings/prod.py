@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 ENVIROMENT = 'prod'
 
@@ -89,14 +90,7 @@ DATABASES = {
 }
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('DB_NAME', default='ecommerce-django'),
-        'USER': os.getenv('DB_USER', default='django-ecommerce'),
-        'PASSWORD': os.getenv('DB_PASSWORD', default='h\e(@V~Df`iy5#4l'),
-        'HOST': os.getenv('DB_HOST', default='cloudsql/commerce-370206:southamerica-east1:django-ecommerce'),
-        'PORT': '5432',
-    },
+    'default': dj_database_url.config('postgres://django-ecommerce:h\e(@V~Df`iy5#4l:@//cloudsql/commerce-370206:southamerica-east1:django-ecommerce/ecommerce-django')
 }
 
 # Password validation
