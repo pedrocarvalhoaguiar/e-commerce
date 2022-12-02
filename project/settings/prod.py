@@ -175,8 +175,8 @@ SITE_ID = 2
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
-DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-GS_BUCKET_NAME = 'django-ecommerce'
-STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-GS_ACCESS_KEY_ID = 'GOOG1EZ6TONBICEI7NJIY4Y4FGMDWH2OIYW6OFHWLU4AWHQP4SGQVMF7CGBSI'
-GS_SECRET_ACCESS_KEY = 'DZ+6mRIsz0boTmgj3wax6hQD/OlwqDFls9QDqG+m'
+# DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+# GS_BUCKET_NAME = 'django-ecommerce'
+# STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+# GS_ACCESS_KEY_ID = 'GOOG1EZ6TONBICEI7NJIY4Y4FGMDWH2OIYW6OFHWLU4AWHQP4SGQVMF7CGBSI'
+# GS_SECRET_ACCESS_KEY = 'DZ+6mRIsz0boTmgj3wax6hQD/OlwqDFls9QDqG+m'
