@@ -7,7 +7,7 @@ RUN apt-get install -y --no-install-recommends gettext libcairo2 libffi-dev libp
 
 # Required envs
 ENV PYTHONUNBUFFERED=1 \
-    DJANGO_SETTINGS_MODULE=settings.settings \
+    DJANGO_SETTINGS_MODULE=settings.prod \
     TZ=America/Sao_Paulo \
     OAUTHLIB_INSECURE_TRANSPORT=True \
     PYTHONPATH=sec\

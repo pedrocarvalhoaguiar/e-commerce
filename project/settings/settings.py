@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-3*e0golk!sh3w@*%$8c8%w9+ba8f=6_=yvfbmbn=$*p&dg-meg
 DEBUG = True
 
 SELF_DOMAIN = 'ecommerce-7mv7ytuela-uc.a.run.app'
-ALLOWED_HOSTS = [SELF_DOMAIN]
+ALLOWED_HOSTS = [SELF_DOMAIN, '*']
 CSRF_TRUSTED_ORIGINS = [f'https://{SELF_DOMAIN}']
 
 # Application definition
@@ -85,9 +85,13 @@ WSGI_APPLICATION = 'wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config('DB_NAME', default='ecommerce-django'),
+        'USER': config('DB_USER', default='django-ecommerce'),
+        'PASSWORD': config('DB_PASSWORD', default='h\e(@V~Df`iy5#4l'),
+        'HOST': config('DB_HOST', default='35.199.109.252'),
+        'PORT': '5432',
+    },
 }
 
 
