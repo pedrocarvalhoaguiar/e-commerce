@@ -18,11 +18,14 @@ from django.urls import path, include
 from django.contrib.auth.views import LogoutView
 from django.conf import settings
 from django.conf.urls.static import static
+from src.user.views import registration, login_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('src.product.urls')),
     path('cart/', include('src.cart.urls')),
+    path('register/', registration, name='registration'),
+    path('login/', login_view, name='login'),
     path('logout/', LogoutView.as_view(), name='logout')
 ]
 
